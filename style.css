@@ -216,6 +216,25 @@ h2 {
 /* ======================
    🔧 SKILLS / GRID
 ====================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 1rem 0.6rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+  font-size: 0.8rem;
+  width: 100%;
+  max-width: 150px; /* Default max size on large screens */
+}
+
 @media (max-width: 600px) {
   .grid {
     display: flex;
@@ -234,6 +253,7 @@ h2 {
   transform: scale(1.05);
   background: var(--primary);
 }
+
 
 /* ======================
    💼 PROJECTS
