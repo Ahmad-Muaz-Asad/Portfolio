@@ -216,42 +216,19 @@ h2 {
 /* ======================
    🔧 SKILLS / GRID
 ====================== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1.2rem;
-  margin-top: 1rem;
+@media (max-width: 600px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+
+  .card {
+    flex: 0 0 22vw; /* Each card takes up 30% of width */
+    max-width: none;
+  }
 }
-
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1.2rem;
-  margin-top: 1rem;
-}
-
-.card {
-  background: var(--card-bg);
-  padding: 1.2rem;
-  border-radius: 10px;
-  text-align: center;
-  transition: transform 0.3s ease, background 0.3s ease;
-  width: 100%;
-}
-
-
-
-.card {
-  background: var(--card-bg);
-  padding: 1.2rem 0.8rem;
-  border-radius: 10px;
-  text-align: center;
-  transition: transform 0.3s ease, background 0.3s ease;
-  width: 100%;
-  max-width: 160px;
-}
-
 
 .card:hover {
   transform: scale(1.05);
